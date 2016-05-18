@@ -23,12 +23,13 @@
         <script type="text/javascript">
 document.addEventListener("backbutton", onBackKeyDown, false);
 function onBackKeyDown(e) {
-  //alert("back button");
+  alert("back button 1");
  e.preventDefault();
 }
 </script>
    <script type="text/javascript">
     function onLoad() {
+        alert("backbutton 2");
         document.addEventListener("deviceready", onDeviceReady, false);
     }
     
@@ -50,6 +51,7 @@ function onBackKeyDown(e) {
     //handle Back button
 
 function onDeviceReady() {
+    alert("backbutton 3");
     // Register the event listener
     document.addEventListener("backbutton", onBackKeyDown, false);
     console.log('Device ready - register onBackKeyDown()');                
