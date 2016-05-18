@@ -21,8 +21,34 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script type="text/javascript">
+document.addEventListener("backbutton", onBackKeyDown, false);
+function onBackKeyDown(e) {
+  //alert("back button");
+ e.preventDefault();
+}
+</script>
+   <script type="text/javascript">
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //  
+    function onDeviceReady() {
+        document.addEventListener("resume", onResume, false);
+    }
+
+    // Handle the resume event
+    //
+    function onResume() {
+    //
+    }
+
+
+</script>
+        <script type="text/javascript">
     //handle Back button
-    alert('back ttt');
+
 function onDeviceReady() {
     // Register the event listener
     document.addEventListener("backbutton", onBackKeyDown, false);
@@ -48,7 +74,7 @@ function onBackKeyDown() {
         
     </head>
     
-    <body>
+    <body onload="onLoad()">
     	
         <div class="container">
             
