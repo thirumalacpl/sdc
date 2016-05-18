@@ -21,58 +21,15 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script type="text/javascript">
-document.addEventListener("backbutton", onBackKeyDown, false);
-function onBackKeyDown(e) {
-  alert("back button 1");
- e.preventDefault();
-}
-</script>
-   <script type="text/javascript">
-    function onLoad() {
-        alert("backbutton 2");
-        document.addEventListener("deviceready", onDeviceReady, false);
+        alert('page alert works');
+document.addEventListener('deviceready', function(){
+    document.addEventListener("backbutton", ShowExitDialog, false);
+}, false);
+
+function ShowExitDialog(){
+alert("function called back button");
     }
-    
-    // Cordova is loaded and it is now safe to make calls Cordova methods
-    //  
-    function onDeviceReady() {
-        document.addEventListener("resume", onResume, false);
-    }
-
-    // Handle the resume event
-    //
-    function onResume() {
-    //
-    }
-
-
-</script>
-        <script type="text/javascript">
-    //handle Back button
-
-function onDeviceReady() {
-    alert("backbutton 3");
-    // Register the event listener
-    document.addEventListener("backbutton", onBackKeyDown, false);
-    console.log('Device ready - register onBackKeyDown()');                
-}
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onBackKeyDown() {
-    var active_page = $( ":mobile-pagecontainer" ).pagecontainer( "getActivePage" );
-    var id =active_page.page().attr('id');
-    if (id==='pageone') {
-        if (confirm('Do you want to exit the app?')==true){
-            navigator.app.exitApp();
-        }
-    }
-    else{
-    navigator.app.backHistory();
-    }
-}
-//**
-</script>
+        </script>
         
     </head>
     
