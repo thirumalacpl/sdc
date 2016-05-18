@@ -44,6 +44,8 @@ alert("function called back button");
     </head>
     
     <body onload="onLoad()">
+
+
     	
         <div class="container">
             
@@ -57,6 +59,7 @@ alert("function called back button");
             <img style="display:none; width:75%; margin-top: 10px;" id="smallImage" src="" />
 			<img style="display:none; width:100%; margin-top: 10px;" id="largeImage" src="" />
             
+            <a href="#pageone"><button class="btn btn-lg btn-primary btn-block" >page 1</button></a>
         </div> <!-- /container -->
         
         <!-- Dialogs -->
@@ -77,6 +80,67 @@ alert("function called back button");
                 </div>
             </div>
         </div>
+
+
+   <div data-role="page" id="pageone" class="bg">
+  
+<script type="text/javascript" src="js/index.js"></script>
+  <div data-role="main" class="ui-content">
+   <div style="text-align:center;margin-top: 100px;"><img src="images/logo.png" alt="logo" style="width:60%"></div>
+
+
+
+
+   <div class="col-xs-12 col-sm-6 col-md-4">
+     <form method="post"  style="margin-top: 30px;" id="check-watchuser"> 
+            <div class="box" style="margin-top: 25px;">
+
+         <div class="control-group" style="border-bottom: 1px solid rgba(151, 151, 151, 0.58);margin-bottom: 13px;">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+        <!--<label class="control-label visible-ie8 visible-ie9">Username</label>-->
+        <div class="controls">
+          <div class="input-icon left">
+            <i class=""><img src="images/user-icon.png" class="usic" alt=""></i>
+            <input class="input_text" type="text" autocomplete="off" placeholder="Username" name="username" id="username">
+          </div>
+        </div>
+      </div>  
+
+                     
+<div class="control-group" style="border-bottom: 1px solid rgba(151, 151, 151, 0.58);margin-bottom: 13px;">
+        <!--<label class="control-label visible-ie8 visible-ie9">Password</label>-->
+        <div class="controls">
+          <div class="input-icon left">
+            <i class="icon-lock"><img src="images/pass-icon.png" class="paic" alt=""></i>
+            <input class="input_text" type="password" autocomplete="off" placeholder="********" name="password" id="password">
+          </div>
+        </div>
+      </div>
+
+               <div class="ui-grid-b" style="margin-top: 30px;">
+                 <div class="ui-block-a" style="width:15% !important;">
+                 <br>
+                 </div>
+                 <div class="ui-block-b" style="width:70% !important;"><a href="#" class="ui-btn ui-corner-all ui-shadow logbutton sign_in" id="submit">Login</a></div>
+                 <div class="ui-block-c" style="width:15% !important;"></div>
+                 </div>
+
+              </div>
+              </form>
+            </div>
+
+ <div class="ui-grid-solo">
+      <div class="ui-block-a rece">
+      <a href="" class="resetpas" id="resetonepage" >RESET PASSWORD</a>
+      <br>
+       <!-- <a href="index-man.html" class="resetpas" >User Manual</a> -->
+      </div>
+  </div>
+<!-- <a href="#regid">link to regid</a> -->
+
+
+  </div>
+</div> 
         
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="includes/js/func-cameraSaveMultiple.js"></script>
