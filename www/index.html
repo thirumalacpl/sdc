@@ -20,6 +20,31 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <script type="text/javascript">
+    //handle Back button
+    alert('back ttt');
+function onDeviceReady() {
+    // Register the event listener
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    console.log('Device ready - register onBackKeyDown()');                
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onBackKeyDown() {
+    var active_page = $( ":mobile-pagecontainer" ).pagecontainer( "getActivePage" );
+    var id =active_page.page().attr('id');
+    if (id==='pageone') {
+        if (confirm('Do you want to exit the app?')==true){
+            navigator.app.exitApp();
+        }
+    }
+    else{
+    navigator.app.backHistory();
+    }
+}
+//**
+</script>
         
     </head>
     
@@ -60,7 +85,7 @@
         
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="includes/js/func-cameraSaveMultiple.js"></script>
-        <script type="text/javascript" charset="utf-8" src="includes/js/func-closeApp.js"></script>
+
         
         <script src="includes/js/jquery-1.11.0.min.js" type="text/javascript"></script>
         <script src="includes/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
