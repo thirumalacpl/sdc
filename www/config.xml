@@ -5,13 +5,13 @@
         id        		= "com.TotalIT.ImageForm"
         version   		= "0.1.2">
 
-			<name>TotalIT Image Form</name>
+			<name>ff</name>
 			<description>
-				Dummy app for testing Multiple-Saving-Image Form @ Total IT
+				ff descr
 			</description>
 			
 			<author href="http://totalit.co.id/" email="support@totalit.co.id">
-				Total IT
+				ff
 			</author>
 			
 			<!-- Specify platform for Android only. -->
